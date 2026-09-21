@@ -138,7 +138,8 @@ def run_ppo(
     use_tensorboard: bool = True,
     use_wandb: bool = False,
     save_model: bool = True,
-    eval_updates_freq: int = 5
+    eval_updates_freq: int = 5,
+    algo: str = ""
 ):
     """
     Main function to run the PPO (Proximal Policy Optimization) algorithm.
@@ -264,6 +265,7 @@ def run_ppo(
         "gamma": gamma,
         "env": env_id,
         "algorithm": "D3PO",
+        "algo": algo,
         "seed": seed,
         "num_rollout_steps": num_rollout_steps,
         "num_envs": num_envs,
